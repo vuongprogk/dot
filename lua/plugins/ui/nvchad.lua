@@ -1,4 +1,3 @@
-local manager = require("neo-tree.sources.manager")
 local M = {}
 M.defaults = {
   {
