@@ -29,6 +29,7 @@ require("lazy").setup({
     { import = "plugins.utils" },
     { import = "plugins.editor" },
     { import = "plugins.lang" },
+    { import = "plugins.treesitter" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -44,6 +45,7 @@ require("lazy").setup({
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
+  rocks = { enabled = false }, -- disable rocks
   ui = {
     icons = {
       ft = "",
