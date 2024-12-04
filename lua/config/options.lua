@@ -11,3 +11,4 @@ vim.g.lazyvim_php_lsp = "intelephense"
 local opt = vim.opt
 opt.wildmode = "full"
 opt.ttyfast = true
+vim.g.autoformat = false
