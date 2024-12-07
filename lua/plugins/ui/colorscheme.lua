@@ -4,7 +4,7 @@ return {
     lazy = true,
     priority = 1000,
     opts = function()
-      local transparent = false -- set to true if you would like to enable transparency
+      local transparent = true -- set to true if you would like to enable transparency
       return {
         transparent = transparent,
         styles = {
