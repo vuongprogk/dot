@@ -10,5 +10,5 @@ vim.g.loaded_node_provider = 0
 vim.g.lazyvim_php_lsp = "intelephense"
 local opt = vim.opt
 opt.wildmode = "full"
-opt.ttyfast = true
 vim.g.autoformat = false
+vim.opt.mousescroll = "ver:1,hor:6"
