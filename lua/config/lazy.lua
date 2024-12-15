@@ -25,11 +25,8 @@ require("lazy").setup({
       },
     },
     -- import/override with your plugins
-    { import = "plugins.ui" },
-    { import = "plugins.utils" },
-    { import = "plugins.editor" },
+    { import = "plugins" },
     { import = "plugins.lang" },
-    { import = "plugins.treesitter" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -45,6 +42,9 @@ require("lazy").setup({
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
+  diff = {
+    cmd = "terminal_git",
+  },
   rocks = { enabled = false }, -- disable rocks
   ui = {
     icons = {
@@ -58,34 +58,17 @@ require("lazy").setup({
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
-        "2html_plugin",
-        "tohtml",
-        "getscript",
-        "getscriptPlugin",
         "gzip",
-        "logipat",
-        "netrw",
-        "netrwPlugin",
-        "netrwSettings",
-        "netrwFileHandlers",
-        "matchit",
-        "tar",
-        "tarPlugin",
-        "rrhelper",
-        "spellfile_plugin",
-        "vimball",
-        "vimballPlugin",
-        "zip",
-        "zipPlugin",
-        "tutor",
+        -- "matchit",
+        -- "matchparen",
+        -- "netrwPlugin",
         "rplugin",
-        "syntax",
-        "synmenu",
-        "optwin",
-        "compiler",
-        "bugreport",
-        "ftplugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
       },
     },
   },
+  debug = false,
 })
