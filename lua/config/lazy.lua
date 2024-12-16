@@ -20,9 +20,6 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      opts = {
-        colorscheme = "solarized-osaka",
-      },
     },
     -- import/override with your plugins
     { import = "plugins" },
@@ -42,10 +39,6 @@ require("lazy").setup({
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
-  diff = {
-    cmd = "terminal_git",
-  },
-  rocks = { enabled = false }, -- disable rocks
   ui = {
     icons = {
       ft = "",
