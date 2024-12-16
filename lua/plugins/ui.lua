@@ -1,12 +1,12 @@
 return {
   -- colorscheme
   {
-    "craftzdog/solarized-osaka.nvim",
+    "folke/tokyonight.nvim",
     lazy = true,
-    priority = 1000,
     opts = function()
-      local transparent = false -- set to true if you would like to enable transparency
+      local transparent = false-- set to true if you would like to enable transparency
       return {
+        style = "night", -- storm, night, day, deep, cool
         transparent = transparent,
         styles = {
           sidebars = transparent and "transparent" or "dark",
@@ -113,7 +113,6 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      local LazyVim = require("lazyvim.util")
       opts.sections.lualine_c[4] = {
         LazyVim.lualine.pretty_path({
           length = 0,
@@ -125,6 +124,7 @@ return {
           readonly_icon = " 󰌾 ",
         }),
       }
+      opts.sections.lualine_c[5] = nil
     end,
   },
 }
