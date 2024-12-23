@@ -1,6 +1,7 @@
 return {
   "akinsho/flutter-tools.nvim",
   event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+  enabled = (vim.fn.executable("flutter") == 1),
   opts = {
     decorations = {
       statusline = {
