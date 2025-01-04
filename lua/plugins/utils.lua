@@ -1,17 +1,15 @@
 return {
-	"christoomey/vim-tmux-navigator",
-	cmd = {
-		"TmuxNavigateLeft",
-		"TmuxNavigateDown",
-		"TmuxNavigateUp",
-		"TmuxNavigateRight",
-		"TmuxNavigatePrevious",
-	},
-	keys = {
-		{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-		{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-		{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-		{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-		{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-	},
+  {
+    "ramilito/kubectl.nvim",
+    enabled = vim.fn.executable("kubectl") == 1 and true or false,
+    opts = {},
+    cmd = { "Kubectl", "Kubectx", "Kubens" },
+    keys = {
+      { "<leader>k", '<cmd>lua require("kubectl").toggle()<cr>', {desc = "Open kubectl"} },
+      { "<C-k>", "<Plug>(kubectl.kill)", ft = "k8s_*" },
+      { "7", "<Plug>(kubectl.view_nodes)", ft = "k8s_*" },
+      { "8", "<Plug>(kubectl.view_overview)", ft = "k8s_*" },
+      { "<C-t>", "<Plug>(kubectl.view_top)", ft = "k8s_*" },
+    },
+  },
 }
