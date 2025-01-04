@@ -3,17 +3,14 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = function()
-      local transparent = false-- set to true if you would like to enable transparency
-      return {
-        style = "night", -- storm, night, day, deep, cool
-        transparent = transparent,
-        styles = {
-          sidebars = transparent and "transparent" or "dark",
-          floats = transparent and "transparent" or "dark",
-        },
-      }
-    end,
+    opts = {
+      style = "night", -- storm, night, day, deep, cool
+      transparent = vim.g.transparent,
+      styles = {
+        sidebars = vim.g.transparent and "transparent" or "dark",
+        floats = vim.g.transparent and "transparent" or "dark",
+      },
+    },
   },
   -- change dashboard logo
   {
@@ -55,6 +52,9 @@ return {
         message = {
           view = "mini",
           opts = {},
+        },
+        signature = {
+          auto_open = { enabled = false },
         },
       },
       routes = {
@@ -113,17 +113,6 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      opts.sections.lualine_c[4] = {
-        LazyVim.lualine.pretty_path({
-          length = 0,
-          relative = "cwd",
-          modified_hl = "MatchParen",
-          directory_hl = "",
-          filename_hl = "Bold",
-          modified_sign = "",
-          readonly_icon = " 󰌾 ",
-        }),
-      }
       opts.sections.lualine_c[5] = nil
     end,
   },
