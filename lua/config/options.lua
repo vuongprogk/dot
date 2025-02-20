@@ -12,11 +12,8 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_node_provider = 0
 
-vim.g.lazyvim_php_lsp = "intelephense"
 local opt = vim.opt
-opt.wildmode = "full"
 vim.g.autoformat = false
-vim.opt.mousescroll = "ver:1,hor:6"
 
 -- better coop with fzf-lua
 vim.env.FZF_DEFAULT_OPTS = ""
