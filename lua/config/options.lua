@@ -2,11 +2,6 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font Mono:h18"
-  vim.g.neovide_scale_factor = 0.9
-  vim.g.neovide_detach_on_quit = "always_quit"
-end
 vim.g.loaded_perl_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_python3_provider = 0
@@ -14,13 +9,12 @@ vim.g.loaded_node_provider = 0
 
 vim.g.autoformat = false
 
--- better coop with fzf-lua
-vim.env.FZF_DEFAULT_OPTS = ""
 vim.g.ai_cmp = false
 vim.g.snacks_animate = false
 -- setup with nushell
 LazyVim.terminal.setup("nu")
 vim.g.trouble_lualine = false
+vim.opt.wildmode = "full"
 -- make all keymaps silent by default
 local keymap_set = vim.keymap.set
 ---@diagnostic disable-next-line: duplicate-set-field
