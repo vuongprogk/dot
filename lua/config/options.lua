@@ -12,13 +12,15 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_node_provider = 0
 
-local opt = vim.opt
 vim.g.autoformat = false
 
 -- better coop with fzf-lua
 vim.env.FZF_DEFAULT_OPTS = ""
 vim.g.ai_cmp = false
-
+vim.g.snacks_animate = false
+-- setup with nushell
+LazyVim.terminal.setup("nu")
+vim.g.trouble_lualine = false
 -- make all keymaps silent by default
 local keymap_set = vim.keymap.set
 ---@diagnostic disable-next-line: duplicate-set-field
