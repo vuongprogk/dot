@@ -12,7 +12,9 @@ vim.g.autoformat = false
 vim.g.ai_cmp = false
 vim.g.snacks_animate = false
 -- setup with nushell
-LazyVim.terminal.setup("nu")
+if vim.fn.executable("nu") == 1 then
+  LazyVim.terminal.setup("nu")
+end
 vim.g.trouble_lualine = false
 vim.opt.wildmode = "full"
 -- make all keymaps silent by default
