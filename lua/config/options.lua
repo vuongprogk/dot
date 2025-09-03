@@ -9,7 +9,6 @@ vim.g.loaded_node_provider = 0
 
 vim.g.autoformat = false
 
-vim.g.ai_cmp = false
 -- setup with nushell
 if vim.fn.executable("nu") == 1 then
   LazyVim.terminal.setup("nu")
