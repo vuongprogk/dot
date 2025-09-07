@@ -36,7 +36,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
   },
   rocks = { enabled = false },
-  checker = { enabled = true },
+  checker = { enabled = false },
   ui = {
     icons = {
       ft = "",
