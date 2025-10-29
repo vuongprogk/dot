@@ -13,6 +13,9 @@ vim.g.autoformat = false
 if vim.fn.executable("nu") == 1 then
   LazyVim.terminal.setup("nu")
 end
+if vim.fn.executable("zsh") then
+  LazyVim.terminal.setup("zsh")
+end
 vim.g.trouble_lualine = false
 vim.opt.wildmode = "full"
 -- make all keymaps silent by default
